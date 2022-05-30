@@ -1026,7 +1026,6 @@
                                         <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
