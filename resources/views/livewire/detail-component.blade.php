@@ -36,7 +36,7 @@
                         <div class="wrap-social">
                             <a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png') }}" alt="></a>
                         </div>
-                        <div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
+                        <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
                         <div class="stock-info in-stock">
                             <p class="availability">Availability: <b>{{ $product->stock_status }}</b></p>
                         </div>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="wrap-butons">
-                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">Add to Cart</a>
                             <div class="wrap-btn">
                                 <a href="#" class="btn btn-compare">Add Compare</a>
                                 <a href="#" class="btn btn-wishlist">Add Wishlist</a>
@@ -218,7 +218,7 @@
                                         </div>
                                         <div class="product-info">
                                             <a href="{{ route('product.detail', ['slug' => $product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
-                                            <div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
+                                            <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
                                         </div>
                                     </div>
                                 </li>
@@ -249,7 +249,7 @@
                                     </div>
                                     <div class="product-info">
                                         <a href="{{ route('product.detail', ['slug' => $product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
-                                        <div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
+                                        <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
                                     </div>
                                 </div>
                             @endforeach

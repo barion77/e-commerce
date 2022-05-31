@@ -26,11 +26,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeComponent::class)->name('home');
 
-Route::get('/shop', ShopComponent::class)->name('shop');
+Route::get('/shop', ShopComponent::class)->name('product.shop');
 
-Route::get('/cart', CartComponent::class)->name('cart');
+Route::get('/cart', CartComponent::class)->name('product.cart');
 
-Route::get('/checkout', CheckoutComponent::class)->name('checkout');
+Route::get('/checkout', CheckoutComponent::class)->name('product.checkout');
 
 Route::get('/product/{slug}', DetailComponent::class)->name('product.detail');
 
