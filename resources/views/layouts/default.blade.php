@@ -88,7 +88,7 @@
 												</ul>
 											</li>
 										@else
-											<li class="menu-item menu-item-has-children parent" >
+											<li class="menu-item menu-item-has-children parent" >s
 												<a title="My account" href="#">My account {{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
