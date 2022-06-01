@@ -8,15 +8,20 @@ use Livewire\WithPagination;
 use App\Models\Category;
 use Cart;
 
-class ShopComponent extends Component
+class SearchComponent extends Component
 {
     public $sorting;
     public $pagesize;
+
+    public $search;
+    public $product_cat;
+    public $product_cat_id;
 
     public function mount()
     {
         $this->sorting = "default";
         $this->pagesize = 12;
+        $this->fill(request()->only('search', 'product_cat', 'product_cat_id'));
     }
 
     public function store($product_id, $product_name, $product_price)
@@ -31,26 +36,25 @@ class ShopComponent extends Component
     {
         if ($this->sorting == 'date')
         {
-            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
+            $products = Product::where('name', 'like', '%' . $this->search . '%')->where('category_id', 'like', '%' . $this->product_cat_id . '%')->orderBy('created_at', 'DESC')->paginate($this->pagesize);
         }
         else if ($this->sorting == 'price')
         {
-            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
+            $products = Product::where('name', 'like', '%' . $this->search . '%')->where('category_id', 'like', '%' . $this->product_cat_id . '%')->orderBy('regular_price', 'ASC')->paginate($this->pagesize);
         }
         else if ($this->sorting == 'price-desc')
         {
-            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);
+            $products = Product::where('name', 'like', '%' . $this->search . '%')->where('category_id', 'like', '%' . $this->product_cat_id . '%')->orderBy('regular_price', 'DESC')->paginate($this->pagesize);
         }
         else 
         {
-            $products = Product::paginate($this->pagesize);
+            $products = Product::where('name', 'like', '%' . $this->search . '%')->where('category_id', 'like', '%' . $this->product_cat_id . '%')->paginate($this->pagesize);
         }
 
         $popular_products = Product::inRandomOrder()->limit(4)->get();
-
         $categories = Category::all();
 
-        return view('livewire.shop-component', [
+        return view('livewire.search-component', [
             'products' => $products,
             'categories' => $categories,
             'popular_products' => $popular_products,
