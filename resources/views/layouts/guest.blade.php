@@ -221,13 +221,13 @@
 									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ route('shop') }}" class="link-term mercado-item-title">Shop</a>
+									<a href="{{ route('product.shop') }}" class="link-term mercado-item-title">Shop</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ route('cart') }}" class="link-term mercado-item-title">Cart</a>
+									<a href="{{ route('product.cart') }}" class="link-term mercado-item-title">Cart</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ route('checkout') }}" class="link-term mercado-item-title">Checkout</a>
+									<a href="{{ route('product.checkout') }}" class="link-term mercado-item-title">Checkout</a>
 								</li>
 								<li class="menu-item">
 									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
