@@ -6,7 +6,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Add New Product
+                                Update Product
                             </div>
                             <div class="col-md-6">
                                 <a href="{{ route('admin.products') }}" class="btn btn-success pull-right">All Products</a>
@@ -24,7 +24,7 @@
                                 {{ Session::get('message_error') }}
                             </div>
                         @endif
-                        <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="create_product()">
+                        <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="update_product()">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Name</label>
                                 <div class="col-md-4">
@@ -94,9 +94,11 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Image</label>
                                 <div class="col-md-4">
-                                    <input type="file" placeholder="Product Image" class="input-file" wire:model="image">
-                                    @if ($image)
-                                        <img src="{{ $image->temporaryUrl() }}" width="120" style="padding: 10px 0">
+                                    <input type="file" placeholder="Product Image" class="input-file" wire:model="new_image">
+                                    @if ($new_image)
+                                        <img src="{{ $new_image->temporaryUrl() }}" width="120" style="padding: 10px 0">
+                                    @else
+                                        <img src="{{ asset('assets/images/products') }}/{{ $image }}" width="120" style="padding: 10px 0">
                                     @endif
                                 </div>
                             </div>
@@ -114,7 +116,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    <input type="submit" value="Create" class="btn btn-success">
+                                    <input type="submit" value="Update" class="btn btn-success">
                                 </div>
                             </div>
                         </form>

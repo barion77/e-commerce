@@ -15,8 +15,13 @@
                     </div>
                     <div class="panel-body">
                         @if (Session::has('message_success'))
-                            <div class="alert alert-success">
+                            <div class="alert alert-success" role="alert">
                                 {{ Session::get('message_success') }}
+                            </div>
+                        @endif
+                        @if (Session::has('message_error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ Session::get('message_error') }}
                             </div>
                         @endif
                         <form class="form-horizontal" wire:submit.prevent="store_category()">
