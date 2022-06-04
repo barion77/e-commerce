@@ -1,7 +1,5 @@
 <main id="main" class="main-site">
-
     <div class="container">
-
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="{{ route('home') }}" class="link">home</a></li>
@@ -9,7 +7,6 @@
             </ul>
         </div>
         <div class=" main-content-area">
-
             <div class="wrap-iten-in-cart">
                 @if (Session::has('success_message'))
                     <div class="alert alert-success">
@@ -69,12 +66,10 @@
                     <a class="btn btn-update" href="#">Update Shopping Cart</a>
                 </div>
             </div>
-
             <div class="wrap-show-advance-info-box style-1 box-in-site">
                 <h3 class="title-box">Most Viewed Products</h3>
                 <div class="wrap-products">
                     <div class="products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"5"}}' >
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -92,7 +87,6 @@
                                 <div class="wrap-price"><span class="product-price">$250.00</span></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -110,7 +104,6 @@
                                 <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -129,7 +122,6 @@
                                 <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -147,7 +139,6 @@
                                 <div class="wrap-price"><span class="product-price">$250.00</span></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -162,7 +153,6 @@
                                 <div class="wrap-price"><span class="product-price">$250.00</span></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -180,7 +170,6 @@
                                 <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -198,7 +187,6 @@
                                 <div class="wrap-price"><span class="product-price">$250.00</span></div>
                             </div>
                         </div>
-
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -219,8 +207,6 @@
                     </div>
                 </div><!--End wrap-products-->
             </div>
-
         </div><!--end main content area-->
     </div><!--end container-->
-
 </main>

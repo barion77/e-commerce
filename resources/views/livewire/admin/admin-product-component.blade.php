@@ -45,7 +45,7 @@
                                 @foreach ($products as $product)
                                     <tr>
                                         <td>{{ $product->id }}</td>
-                                        <td><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" width="60" alt=""></td>
+                                        <td><a href="{{ route('product.detail', ['slug' => $product->slug]) }}"><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" width="60" alt=""></a></td>
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->stock_status }}</td>
                                         <td>{{ $product->regular_price }}</td>

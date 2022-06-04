@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -85,13 +86,16 @@
 														<a titile="Manage Home Slider" href="{{ route('admin.slider') }}">Manage Home Slider</a>
 													</li>
 													<li class="menu-item">
+														<a titile="Manage Home Categories" href="{{ route('admin.home-categories') }}">Manage Home Categories</a>
+													</li>
+													<li class="menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
 													</li>
 													<form id="form-logout" action="{{ route('logout') }}" method="POST">@csrf</form>
 												</ul>
 											</li>
 										@else
-											<li class="menu-item menu-item-has-children parent" >s
+											<li class="menu-item menu-item-has-children parent" >
 												<a title="My account" href="#">My account {{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
@@ -460,6 +464,8 @@
 	<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
 	<script src="{{ asset('assets/js/functions.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     @livewireScripts
+	@stack('scripts')
 </body>
 </html>

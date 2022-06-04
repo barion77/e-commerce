@@ -240,9 +240,6 @@
                                         <a href="{{ route('product.detail', ['slug' => $product->slug]) }}" title="{{ $product->name }}">
                                             <figure><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
                                         </a>
-                                        <div class="group-flash">
-                                            <span class="flash-item new-label">new</span>
-                                        </div>
                                         <div class="wrap-btn">
                                             <a href="{{ route('product.detail', ['slug' => $product->slug]) }}" class="function-link">quick view</a>
                                         </div>
