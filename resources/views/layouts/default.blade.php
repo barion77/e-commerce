@@ -120,7 +120,6 @@
 
 				<div class="container">
 					<div class="mid-section main-info-area">
-
 						<div class="wrap-logo-top left-section">
 							<a href="{{ route('home') }}" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}" alt="mercado"></a>
 						</div>
@@ -156,7 +155,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="nav-section header-sticky">
 					<div class="header-nav-section">
 						<div class="container">
@@ -169,7 +167,6 @@
 							</ul>
 						</div>
 					</div>
-
 					<div class="primary-nav-section">
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
@@ -203,7 +200,6 @@
 
 	<footer id="footer">
 		<div class="wrap-footer-content footer-style-1">
-
 			<div class="wrap-function-info">
 				<div class="container">
 					<ul>
@@ -213,7 +209,6 @@
 								<h4 class="fc-name">Free Shipping</h4>
 								<p class="fc-desc">Free On Oder Over $99</p>
 							</div>
-
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-recycle" aria-hidden="true"></i>
@@ -221,7 +216,6 @@
 								<h4 class="fc-name">Guarantee</h4>
 								<p class="fc-desc">30 Days Money Back</p>
 							</div>
-
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
@@ -229,7 +223,6 @@
 								<h4 class="fc-name">Safe Payment</h4>
 								<p class="fc-desc">Safe your online payment</p>
 							</div>
-
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-life-ring" aria-hidden="true"></i>
@@ -237,7 +230,6 @@
 								<h4 class="fc-name">Online Suport</h4>
 								<p class="fc-desc">We Have Support 24/7</p>
 							</div>
-
 						</li>
 					</ul>
 				</div>
@@ -245,11 +237,8 @@
 			<!--End function info-->
 
 			<div class="main-footer-content">
-
 				<div class="container">
-
 					<div class="row">
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Contact Details</h3>
@@ -275,7 +264,6 @@
 						</div>
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Hot Line</h3>
 								<div class="item-content">
@@ -297,7 +285,6 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
@@ -332,11 +319,9 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
-
+					
 					<div class="row">
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">We Using Safe Payments:</h3>
@@ -347,7 +332,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Social network</h3>
@@ -364,7 +348,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Dowload App</h3>
@@ -378,7 +361,6 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 
@@ -426,12 +408,10 @@
 									<li><a href="#" class="redirect-back-link" title="BootsMen Watches" >BootsMen Watches</a></li>
 									<li><a href="#" class="redirect-back-link" title="Women Watches" >Women Watches</a></li>
 								</ul>
-
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 
 			<div class="coppy-right-box">

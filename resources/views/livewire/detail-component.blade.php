@@ -1,7 +1,16 @@
 <main id="main" class="main-site">
 
-    <div class="container">
+    <style>
+        .regprice {
+            font-weight: 300px;
+            font-size: 13px !important;
+            color: #aaaaaa !important;
+            text-decoration: line-through;
+            padding-left: 10px;
+        }
+    </style>
 
+    <div class="container">
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="{{ route('home') }}" class="link">home</a></li>
@@ -34,9 +43,16 @@
                             {{ $product->short_description }}
                         </div>
                         <div class="wrap-social">
-                            <a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png') }}" alt="></a>
+                            <a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png') }}" alt=""></a>
                         </div>
-                        <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
+                        @if ($product->sale_price > 0)
+                            <div class="wrap-price">
+                                <span class="product-price">${{ $product->sale_price }}</span>
+                                <del><span class="product-price regprice">${{ $product->regular_price }}</span></del>
+                            </div>
+                        @else
+                            <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
+                        @endif
                         <div class="stock-info in-stock">
                             <p class="availability">Availability: <b>{{ $product->stock_status }}</b></p>
                         </div>
