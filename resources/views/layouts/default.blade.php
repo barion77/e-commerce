@@ -142,7 +142,7 @@
 								</a>
 							</div>
 							<div class="wrap-icon-section minicart">
-								<a href="{{ route('home') }}" class="link-direction">
+								<a href="{{ route('product.cart') }}" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
 										<span class="index">{{ Cart::count() }}</span>

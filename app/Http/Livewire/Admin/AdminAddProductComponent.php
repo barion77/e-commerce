@@ -37,11 +37,17 @@ class AdminAddProductComponent extends Component
 
     public function create_product()
     {
-        if (Product::where('slug', $this->slug)->count() > 0)
-        {
-            session()->flash('message_error', 'Such a product already exists!');
-            return false;
-        }
+        $this->validate([
+            'name' => 'required',
+            'slug' => 'required:unique:products',
+            'short_description' => 'required|min:10|max:255',
+            'product_description' => 'required|min:10|max:510',
+            'regular_price' => 'required|integer',
+            'sale_price' => 'integer',
+            'sku' => 'required',
+            'quantity' => 'required|integer',
+            'category_id' => 'required|integer',
+        ]);
 
         $product = new Product();
         $product->name = $this->name;

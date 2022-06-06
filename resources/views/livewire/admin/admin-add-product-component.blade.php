@@ -19,52 +19,68 @@
                                 {{ Session::get('message_success') }}
                             </div>
                         @endif
-                        @if (Session::has('message_error'))
-                            <div class="alert alert-danger" role="alert">
-                                {{ Session::get('message_error') }}
-                            </div>
-                        @endif
                         <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="create_product()">
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Name</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generate_slug()">
+                                    @error('name')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Slug</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Product Slug" class="form-control input-md" wire:model="slug">
+                                    @error('slug')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Short Description</label>
                                 <div class="col-md-4">
                                     <textarea class="form-control" placeholder="Short Description" wire:model="short_description"></textarea>
+                                    @error('short_description')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Description</label>
                                 <div class="col-md-4">
                                     <textarea class="form-control" placeholder="Product Description" wire:model="product_description"></textarea>
+                                    @error('product_description')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Regular Price</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Regular Price" class="form-control input-md" wire:model="regular_price">
+                                    @error('regular_price')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Sale Price</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price">
+                                    @error('sale_price')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">SKU</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="SKU" class="form-control input-md" wire:model="sku" required>
+                                    <input type="text" placeholder="SKU" class="form-control input-md" wire:model="sku">
+                                    @error('sku')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
@@ -89,6 +105,9 @@
                                 <label class="col-md-4 control-label">Quantity</label>
                                 <div class="col-md-4">
                                     <input type="number" placeholder="Quantity" class="form-control input-md" wire:model="quantity">
+                                    @error('quantity')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
@@ -98,6 +117,9 @@
                                     @if ($image)
                                         <img src="{{ $image->temporaryUrl() }}" width="120" style="padding: 10px 0">
                                     @endif
+                                    @error('image')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
@@ -109,6 +131,9 @@
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach
                                     </select>
+                                    @error('category_id')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">

@@ -19,22 +19,23 @@
                                 {{ Session::get('message_success') }}
                             </div>
                         @endif
-                        @if (Session::has('message_error'))
-                            <div class="alert alert-danger" role="alert">
-                                {{ Session::get('message_error') }}
-                            </div>
-                        @endif
                         <form class="form-horizontal" wire:submit.prevent="store_category()">
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="">Category Name</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Categor Name" class="form-control input-md" wire:model="name" wire:keyup="generate_slug()">
+                                    @error('name')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="">Category Slug</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Categor Slug" class="form-control input-md" wire:model="slug">
+                                    @error('slug')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">

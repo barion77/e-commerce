@@ -29,6 +29,11 @@ class AdminEditCategoryComponent extends Component
 
     public function update_category()
     {
+        $this->validate([
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+
         $category = Category::find($this->category_id);
         $category->name = $this->name;
         $category->slug = $this->slug;

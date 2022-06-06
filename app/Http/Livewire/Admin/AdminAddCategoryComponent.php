@@ -18,11 +18,10 @@ class AdminAddCategoryComponent extends Component
 
     public function store_category()
     {   
-        if (Category::where('slug', $this->slug)->count() > 0)
-        {
-            session()->flash('message_error', 'Such a category already exists!');
-            return false;
-        }
+        $this->validate([
+            'name' => 'required',
+            'slug' => 'required:unique:categories',
+        ]);
 
         $category = new Category();
         $category->name = $this->name;
