@@ -17,10 +17,11 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" integrity="sha512-WWc9iSr5tHo+AliwUnAQN1RfGK9AnpiOFbmboA0A0VJeooe69YR2rLgHw13KxF1bOSLmke+SNnLWxmZd8RTESQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+	<link rel="stylesheet" href="{{ asset('assets/css/datetimepicker.min.css') }}">
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
-
 	<!-- mobile menu -->
     <div class="mercado-clone-wrap">
         <div class="mercado-panels-actions-wrap">
@@ -87,6 +88,9 @@
 													</li>
 													<li class="menu-item">
 														<a titile="Manage Home Categories" href="{{ route('admin.home-categories') }}">Manage Home Categories</a>
+													</li>
+													<li class="menu-item">
+														<a titile="Sale Setting" href="{{ route('admin.sale') }}">Sale Setting</a>
 													</li>
 													<li class="menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
@@ -434,7 +438,6 @@
 			</div>
 		</div>
 	</footer>
-	
 	<script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
 	<script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
 	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
@@ -445,6 +448,9 @@
 	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
 	<script src="{{ asset('assets/js/functions.js') }}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="{{ asset('assets/js/moment.js') }}"></script>
+	<script src="{{ asset('assets/js/datetimepicker.min.js') }}"></script>
+	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js" integrity="sha512-Y+0b10RbVUTf3Mi0EgJue0FoheNzentTMMIE2OreNbqnUPNbQj8zmjK3fs5D2WhQeGWIem2G2UkKjAL/bJ/UXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
     @livewireScripts
 	@stack('scripts')
 </body>
